@@ -1,0 +1,152 @@
+.pages__container
+  scroll-snap-type: y mandatory
+  height: 100vh
+  -webkit-overflow-scrolling: touch
+  overflow-y: auto
+  overflow-x: hidden
+.pages__container::-webkit-scrollbar
+  width: 0
+.vertical-slide
+  scroll-snap-align: start
+  height: 768px
+  width: 1024px
+.page1
+  position: relative
+  background: url("../img/main-img.jpg") center
+  background-size: cover
+  overflow: hidden
+  &__title
+    position: absolute
+    top: 8.5rem
+    left: 4.4rem
+    font-size: 3.08rem
+    color: $blue
+    width: 46rem
+    line-height: 3.7rem
+  &__item
+    position: absolute
+    width: auto
+    font-family: 'Lato Regular'
+    font-size: 1.3rem
+    color: $blue
+    &--1
+      top: 17.1rem
+      right: 15.8rem
+    &--2
+      bottom: 21.8rem
+      left: 14rem
+    &--3
+      bottom: 15rem
+      left: 23.1rem
+    &--4
+      bottom: 16rem
+      right: 9rem
+  &__sun-line
+    position: absolute
+    bottom: -5px
+    z-index: 3
+  &__sun-line-base
+    position: absolute
+    bottom: -20px
+  &__sun-animation
+    position: absolute
+    &--large
+      width: 56px
+      height: 56px
+      top: 16.2rem
+      right: 25.45rem
+    &--medium
+      left: 17rem
+      bottom: 19.6rem
+      width: 30px
+      height: 30px
+    &--small
+      width: 20px
+      height: 20px
+      &--left
+        bottom: 13.2rem
+        left: 29.8rem
+      &--right
+        bottom: 14.6rem
+        right: 11.5rem
+  &__scroll-down
+    position: absolute
+    left: 0
+    right: 0
+    margin: 0 auto
+    bottom: 0.9rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    z-index: 4
+//анимированные круги
+.sun-line
+  &__img
+    width: 1024px
+.scroll-down
+  &__title
+    text-align: center
+    font-size: 0.94rem
+    color: $white
+  &__svg
+    width: 2.6rem
+    height: 2.6rem
+    fill: $white
+.sun-animation
+  &__circle1, &__circle2, &__circle3, &__circle4
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    border: solid 1px rgba($red-orange, 0.6)
+    border-radius: 50%
+    background: rgba($orange, 0.25)
+  &__circle2, &__circle3, &__circle4
+    width: 0
+    height: 0
+    &--large
+      animation: large-circle-animate 3s
+      animation-iteration-count: infinite
+    &--medium
+      animation: medium-circle-animate 3s
+      animation-iteration-count: infinite
+    &--small
+      animation: small-circle-animate 3s
+      animation-iteration-count: infinite
+  &__circle1
+    &--large
+      width: 54px
+      height: 54px
+    &--medium
+      width: 28px
+      height: 28px
+    &--small
+      width: 18px
+      height: 18px
+  &__circle3
+    animation-delay: 1s
+  &__circle4
+    animation-delay: 2s
+.pages
+  &__paggination
+    position: fixed
+    height: 60px
+    width: 40px
+    bottom: 0
+    top: 0
+    margin: auto
+    right: 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.paggination
+  &__point
+    background: $white
+    height: 14px
+    width: 14px
+    border-radius: 50%
+    &--orange
+      background: $orange

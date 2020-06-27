@@ -1,0 +1,61 @@
+.page3
+  position: relative
+  background: url("../../img/blue-gradient.jpg") center
+  background-size: cover
+  &__slides-container
+    position: relative
+    height: 768px
+    width: 1024px
+    margin: auto
+    overflow-x: scroll
+    overflow-y: hidden
+    display: flex
+    scroll-snap-type: x mandatory
+  &__slides-navigation
+    position: absolute
+    width: 640px
+    left: 0
+    right: 0
+    margin: auto
+    bottom: 1.6rem
+  &__slide
+    position: relative
+    scroll-snap-align: start
+    min-width: 1024px
+    height: 768px
+    color: $white
+    font-size: 3rem
+//скрытие скролла
+.page3__slides-container
+  &::-webkit-scrollbar
+    width: 0
+    height: 0
+.navigation
+  &__line
+    width: 100%
+    height: 10px
+    background: rgba($white, 0.6)
+    margin-bottom: 1.7rem
+  &__dates
+    color: $white
+    display: flex
+    width: 100%
+    justify-content: space-between
+  &__date
+    font-size: 1.3rem
+  &__range
+    position: absolute
+    width: 660px
+    left: 0
+    right: 0
+    margin: auto
+    top: -1.4rem
+    left: -0.6rem
+    -webkit-appearance: none
+    background: transparent
+    &::-webkit-slider-thumb
+      -webkit-appearance: none
+      width: 50px
+      height: 56px
+      background: url("../../img/thum.png") no-repeat center
+      background-size: 44px 55px
